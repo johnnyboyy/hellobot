@@ -5,12 +5,9 @@ def get_news
 	
 	google = Nokogiri::HTML(open('https://news.google.ca'))
 
-	stories = format_news(google)
+	news_stories = format_news(google)
 
-	stories
-	
-
-
+	news_stories
 end
 
 def format_news(parsed_web_page)
@@ -22,3 +19,8 @@ def format_news(parsed_web_page)
 
 	return stories
 end
+
+def engadget_news
+	
+end
+
