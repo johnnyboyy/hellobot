@@ -1,10 +1,10 @@
 require "socket"
 
-server = "chat.freenode.net"
-port = "6667"
-nick = "HelloBot"
-channel = "#bitmaker"
-greeting_prefix = "privmsg #bitmaker :"
+server            = "chat.freenode.net"
+port              = "6667"
+nick              = "test"
+channel           = "#bitmaker"
+greeting_prefix   = "privmsg #bitmaker :"
 greetings = ["hello", "hi", "hola", "yo", "wazup", "guten tag", "howdy", "salutations", "who the hell are you?"]
 
 
@@ -22,7 +22,7 @@ until irc_server.eof? do
 
   wasGreeted = false
   greetings.each do |g|
-	wasGreeted = true if msg.include? g
+	 Greeted = true if msg.include? g
   end
 
   if msg.include? greeting_prefix and wasGreeted
